@@ -1,0 +1,162 @@
+/****************************************************************************
+  final-project
+******************************************************************************/
+
+
+@import '../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss';
+
+$visual-grid: false;
+$visual-grid-color: green;
+$visual-grid-opacity: 0.1;
+$grid-columns: 12;
+$desktop-page-width: 1088px;
+$max-width: 1088px;
+
+@import '../../bower_components/neat/app/assets/stylesheets/_neat.scss';
+
+$mobile: new-breakpoint(max-width 1075px);
+$phone:  new-breakpoint(max-width 525px);
+
+
+
+/*****************************************************************************
+  Base Styles
+******************************************************************************/
+
+	*, *::after, *::before {
+  		box-sizing: inherit; 
+  		width: 100%;
+  		font-size: 18px;
+  		box-sizing: border-box;
+	}
+
+	.btn	{
+		font-family: helvetica;
+		text-align: center;
+		margin-top: 15px;
+		margin-bottom: 0px;
+		font-size: 1rem;
+		@include span-columns(3);
+	}
+
+	a.btn:nth-child(5n)	{
+		margin-right: 0px;
+	}
+
+	.title				{
+		position: absolute;
+		height: 50%;
+		display: block;
+	}
+
+	.thumbnail		{
+		display: block;
+		border-radius:0px;
+		padding: 0px;
+	}
+
+	.tag				{
+		float: left;
+		position: absolute;
+		background-color: #5cb85c;
+		height: 2rem;
+		bottom: 2rem;
+		left: 2rem;
+		border-radius: 0.6rem;
+		display: block;
+		width: auto;
+		padding-right: 1rem;
+		padding-bottom: 3rem;
+		border: solid 0.1rem green;
+		@include media($mobile)	{
+			height: 1.75rem;
+			bottom: 1rem;
+			left: 1.25rem;
+			border-radius: 0.6rem;
+		}
+	}
+
+	.dot 		{
+		margin-left: 1rem;
+		width: 1rem;
+		height: 1rem;
+		border-top-left-radius: 0.25rem;
+		border-bottom-left-radius: 0.25rem;
+		background-color: white;
+		display: inline-block;
+	}
+
+	.tag-words	{
+		font-size: 1.25rem;
+		color: white;
+		display: inline-block;
+		width: auto;
+	}
+
+	.overall-container	{
+		width: 100%;
+		max-width: ($desktop-page-width);
+		margin: auto;
+	}
+
+/* NTH Columning */
+
+	div:nth-child(4n+2)	{
+		background-color: none;
+		margin-right: 0px;
+	}
+
+	div:nth-child(2n+2)	{
+		@include media($mobile)	{
+			background-color: none;									/* PREVIOUSLY PURPLE */
+			margin-right: 0px;
+		}
+	}
+
+
+/* NTH Columning */
+
+	.image-container					{
+		float: left;
+		clear: auto;
+		position: relative;
+		background-color: none;
+		opacity: 1;
+		margin-bottom: 2rem;
+		@include span-columns(3);
+		@include media($mobile)				{
+			@include span-columns(6);
+		}
+		@include media($phone)				{
+			@include span-columns(12);
+		}
+	}
+
+	.row-gutter			{
+		height: 3em;
+		@include span-columns(12);
+		/*background-color: yellow;*/
+	}
+
+	.row-other							{
+		@include media($mobile)				{		
+			@include span-columns(12);
+			height: 3em;
+			/*background-color: orange;*/
+		}
+	}
+
+	.highlight	{
+		background-color: yellow;
+	}
+
+/*****************************************************************************
+  Layout Styles
+******************************************************************************/
+
+
+
+
+/*****************************************************************************
+  Module Styles
+*****************************************************************************/

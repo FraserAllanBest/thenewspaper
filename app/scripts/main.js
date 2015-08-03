@@ -13,4 +13,8 @@ $(document).ready(function(){
 
 	console.log("HELLO WORLD");
 
+
+	$("div.tag:contains('opinion')").addClass("opinion-tag");
+
+
 });

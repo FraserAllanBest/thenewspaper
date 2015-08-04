@@ -14,7 +14,11 @@ $(document).ready(function(){
 	console.log("HELLO WORLD");
 
 
+	$("div.tag:contains('news')").addClass("news-tag");
 	$("div.tag:contains('opinion')").addClass("opinion-tag");
+	$("div.tag:contains('arts')").addClass("arts-tag");
+	$("div.tag:contains('features')").addClass("features-tag");
+	$("div.tag:contains('columns')").addClass("columns-tag");
 
 	$("div.nav-button:contains('news')").addClass("news-nav-button");
 	$("div.nav-button:contains('opinion')").addClass("opinion-nav-button");
@@ -31,7 +35,7 @@ $(document).ready(function(){
 
 	$menu.waypoint(function()	{
 		$(".bar").toggleClass("bar-locked");
-		$(".cover-photo").toggleClass("sticky-offset")
+		$(".cover-photo").toggleClass("sticky-offset");
 	});
 
 });

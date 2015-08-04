@@ -12,16 +12,18 @@ $grid-columns: 12;
 $desktop-page-width: 1088px;
 $max-width: 1088px;
 
-$purple-light: #9d7bd3;
-$purple-dark:  #1a4f1d;
-$green-light:  #2f862c;
-$green-dark:   #236e21;
+$purple-light: #9b6bce;
+$purple-dark:  #8146c0;
+$green-light:  #5cc966;
+$green-dark:   #3db548;
 $yellow-light: #c6b255;
 $yellow-dark:  #bba13e;
 $red-light:    #ca6162;
 $red-dark:     #c44d4f;
 $blue-light:   #92a2db;
 $blue-dark:    #6e90cf;
+$orange-dark:  #bf7641;
+$orange-light: #cd9266;
 
 @import '../../bower_components/neat/app/assets/stylesheets/_neat.scss';
 
@@ -49,6 +51,7 @@ $phone:  new-breakpoint(max-width 525px);
 		margin: auto;
 	}
 
+
 	.sticky-offset	{
 		margin-bottom: 6rem;
 	}
@@ -70,10 +73,13 @@ $phone:  new-breakpoint(max-width 525px);
 		width: 33.333%;
 		text-align: center;
 		font-size: 1rem;
-		background-color: $blue-light;
 		color: white;
 		height: 100%;
 		height: 3.9rem;
+	}
+
+	#home-button.menu-button	{
+		background-color: gray;
 	}
 
 	#facebook.menu-button	{
@@ -140,7 +146,7 @@ $phone:  new-breakpoint(max-width 525px);
 	}
 
 	.columns-nav-button	{
-		background-color: $red-light;
+		background-color: $orange-light;
 	}
 
 															/* IMAGES START */
@@ -230,6 +236,18 @@ $phone:  new-breakpoint(max-width 525px);
 		background-color: yellow;
 	}
 
+	.news-tag	{
+		background-color: $green-light;
+		border-color: $green-dark;
+		opacity: 0.75;
+	}
+
+	.news-tag:hover	{
+		background-color: $green-light;
+		border-color: $green-dark;
+		opacity: 1;
+	}
+
 																/*	OPINION TAGS START	*/
 	.opinion-tag	{
 		background-color: $red-light;
@@ -243,6 +261,42 @@ $phone:  new-breakpoint(max-width 525px);
 		opacity: 1;
 	}
 																/*	OPINION TAGS END	*/
+
+	.arts-tag	{
+		background-color: $yellow-light;
+		border-color: $yellow-dark;
+		opacity: 0.75;
+	}
+
+	.arts-tag:hover	{
+		background-color: $yellow-light;
+		border-color: $yellow-dark;
+		opacity: 1;
+	}
+
+	.features-tag	{
+		background-color: $purple-light;
+		border-color: $purple-dark;
+		opacity: 0.75;
+	}
+
+	.features-tag:hover	{
+		background-color: $purple-light;
+		border-color: $purple-dark;
+		opacity: 1;
+	}
+
+	.columns-tag	{
+		background-color: $orange-light;
+		border-color: $orange-dark;
+		opacity: 0.75;
+	}
+
+	.columns-tag:hover	{
+		background-color: $orange-light;
+		border-color: $orange-dark;
+		opacity: 1;
+	}
 
 
 /*****************************************************************************

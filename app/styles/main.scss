@@ -1,4 +1,4 @@
-/****************************************************************************
+/***************************************************************************
   final-project
 ******************************************************************************/
 
@@ -13,9 +13,9 @@ $desktop-page-width: 1088px;
 $max-width: 1088px;
 
 $purple-light: #9d7bd3;
-$purple-dark:  #8059c8;
-$green-light:  #64cb70;
-$green-dark:   #46c14a;
+$purple-dark:  #1a4f1d;
+$green-light:  #2f862c;
+$green-dark:   #236e21;
 $yellow-light: #c6b255;
 $yellow-dark:  #bba13e;
 $red-light:    #ca6162;
@@ -43,17 +43,14 @@ $phone:  new-breakpoint(max-width 525px);
   		box-sizing: border-box;
 	}
 
-	.btn	{
-		font-family: helvetica;
-		text-align: center;
-		margin-top: 15px;
-		margin-bottom: 0px;
-		font-size: 1rem;
-		@include span-columns(3);
+	.overall-container	{
+		width: 100%;
+		max-width: ($desktop-page-width);
+		margin: auto;
 	}
 
-	a.btn:nth-child(5n)	{
-		margin-right: 0px;
+	.sticky-offset	{
+		margin-bottom: 6rem;
 	}
 
 	.title				{
@@ -62,16 +59,133 @@ $phone:  new-breakpoint(max-width 525px);
 		display: block;
 	}
 
+	.menubar		{
+		float: left;
+		width: 20%;
+		margin-bottom: 2rem;
+	}
+
+	.menu-button	{
+		float: left;
+		width: 33.333%;
+		text-align: center;
+		font-size: 1rem;
+		background-color: $blue-light;
+		color: white;
+		height: 100%;
+		height: 3.9rem;
+	}
+
+	#facebook.menu-button	{
+		background-color: #3B5998;
+	}
+
+	#facebook-logo	{
+		font-style: bold;
+		font-size: 2.5rem;
+		margin-top: 0.25rem;
+	}
+
+	#twitter.menu-button	{
+		background-color: #4099FF;
+	}
+
+	#twitter-logo	{
+		max-height: 3rem;
+		max-width: 3rem;
+		margin-top: 0.5rem;
+	}
+
+	.navibar	{
+		float: left;
+		width: 80%;
+		margin-bottom: 2rem;
+	}
+
+	.bar-locked	{
+		position: fixed;
+		float: left;
+		z-index: 10;
+		top: 0rem;
+		@include outer-container;
+
+	}
+
+	.nav-button	{
+		float: left;
+		font-family: helvetica;
+		text-align: center;
+		margin-top: 0rem;
+		margin-bottom: 0px;
+		font-size: 1rem;
+		background-color: $blue-light;
+		color: white;
+		width: 20%;
+	}
+
+	.news-nav-button	{
+		background-color: $green-light;
+	}
+
+	.opinion-nav-button	{
+		background-color: $red-light;
+	}
+
+	.arts-nav-button	{
+		background-color: $yellow-light;
+	}
+
+	.features-nav-button	{
+		background-color: $purple-light;
+	}
+
+	.columns-nav-button	{
+		background-color: $red-light;
+	}
+
+															/* IMAGES START */
+
+	.image-container					{
+		float: left;
+		clear: auto;
+		position: relative;
+		background-color: none;
+		opacity: 1;
+		margin-bottom: 2rem;
+		@include span-columns(3);
+		@include media($mobile)				{
+			@include span-columns(6);
+		}
+		@include media($phone)				{
+			@include span-columns(12);
+		}
+	}
+
+	.image-container:nth-child(4n+2)	{
+		background-color: none;
+		margin-right: 0px;
+	}
+
+	.image-container:nth-child(2n+2)	{
+		@include media($mobile)	{
+			background-color: none;
+			margin-right: 0px;
+		}
+	}
+
 	.thumbnail		{
 		display: block;
 		border-radius:0px;
 		padding: 0px;
 	}
+																/* IMAGES END */
 
+
+																/* TAGS START 	*/
 	.tag				{
 		float: left;
 		position: absolute;
-		background-color: #5cb85c;
+		background-color: $green-light;
 		height: 2rem;
 		bottom: 2rem;
 		left: 2rem;
@@ -81,11 +195,14 @@ $phone:  new-breakpoint(max-width 525px);
 		padding-right: 1rem;
 		padding-left: 1rem;
 		padding-bottom: 2.95rem;
-		border: solid 0.1rem green;
+		border-width: 0.1rem;
+		border-style: solid;
+		border-color: $green-dark;
+		opacity: 0.75;
 		@include media($mobile)	{
 			height: 1.75rem;
-			bottom: 1rem;
-			left: 1.25rem;
+			bottom: 2rem;
+			left: 2rem;
 			border-radius: 0.6rem;
 		}
 	}
@@ -107,68 +224,26 @@ $phone:  new-breakpoint(max-width 525px);
 		display: inline-block;
 		width: auto;
 	}
-
-	.overall-container	{
-		width: 100%;
-		max-width: ($desktop-page-width);
-		margin: auto;
-	}
-
-/* NTH Columning */
-
-	div:nth-child(4n+2)	{
-		background-color: none;
-		margin-right: 0px;
-	}
-
-	div:nth-child(2n+2)	{
-		@include media($mobile)	{
-			background-color: none;									/* PREVIOUSLY PURPLE */
-			margin-right: 0px;
-		}
-	}
-
-
-/* NTH Columning */
-
-	.image-container					{
-		float: left;
-		clear: auto;
-		position: relative;
-		background-color: none;
-		opacity: 1;
-		margin-bottom: 2rem;
-		@include span-columns(3);
-		@include media($mobile)				{
-			@include span-columns(6);
-		}
-		@include media($phone)				{
-			@include span-columns(12);
-		}
-	}
-
-	.row-gutter			{
-		height: 3em;
-		@include span-columns(12);
-		/*background-color: yellow;*/
-	}
-
-	.row-other							{
-		@include media($mobile)				{		
-			@include span-columns(12);
-			height: 3em;
-			/*background-color: orange;*/
-		}
-	}
+																/* TAGS END 	*/
 
 	.highlight	{
 		background-color: yellow;
 	}
 
+																/*	OPINION TAGS START	*/
 	.opinion-tag	{
 		background-color: $red-light;
 		border-color: $red-dark;
+		opacity: 0.75;
 	}
+
+	.opinion-tag:hover	{
+		background-color: $red-light;
+		border-color: $red-dark;
+		opacity: 1;
+	}
+																/*	OPINION TAGS END	*/
+
 
 /*****************************************************************************
   Layout Styles
@@ -179,4 +254,4 @@ $phone:  new-breakpoint(max-width 525px);
 
 /*****************************************************************************
   Module Styles
-*****************************************************************************/
+****************************************************************************/

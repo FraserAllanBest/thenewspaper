@@ -23,25 +23,49 @@
     <img class="top-header" src="https://placehold.it/3500x1000/#ACC4CE">
   </div>
 
-<!-- BOOTSTRAP NAVBAR START -->
-<div class="navbar">
+<!-- BAR START -->
+<div class="bar">
+  <div class="menubar">
 
-  <a class="btn btn-default btn-info" href="#" role="button">
-    <h4>GitInit</h4>
-  </a>
+    <div class="menu-button">
+      <h4>News</h4>
+    </div>
+    
+    <a href="https://g.twimg.com/dev/documentation/image/Twitter_logo_white_48.png">
+      <div class="menu-button" id="twitter">
+          <img id="twitter-logo" img src="https://g.twimg.com/dev/documentation/image/Twitter_logo_white_48.png">
+      </div>
+    </a>
 
-  <a class="btn btn-default btn-info" href="#" role="button">
-    <h4>Home</h4>
-  </a>
+    <div class="menu-button" id="facebook">
+      <p id="facebook-logo">f</p>
+    </div>
 
-  <a class="btn btn-default btn-info" href="#" role="button">
-    <h4>Home</h4>
-  </a>
+  </div>
 
-  <a class="btn btn-default btn-info" href="#" role="button">
-    <h4>Home</h4>
-  </a>
+  <div class="navibar">
 
+    <div class="nav-button">
+      <h4>news</h4>
+    </div>
+
+    <div class="nav-button">
+      <h4>opinion</h4>
+    </div>
+
+    <div class="nav-button">
+      <h4>arts</h4>
+    </div>
+
+    <div class="nav-button">
+      <h4>features</h4>
+    </div>
+
+    <div class="nav-button">
+      <h4>columns</h4>
+    </div>
+
+  </div>
 </div>
 
 <!-- BOOTSTRAP NAVBAR END   -->
@@ -139,6 +163,8 @@
 
     <!-- build:js scripts/main.js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/jquery.waypoints.min.js"></script>
+    <script src="../bower_components/sticky.min.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>

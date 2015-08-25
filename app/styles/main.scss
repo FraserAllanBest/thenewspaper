@@ -6,7 +6,7 @@
 @import '../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss';
 
 $visual-grid: false;
-$visual-grid-color: green;
+$visual-grid-color: brown;
 $visual-grid-opacity: 0.1;
 $grid-columns: 12;
 $desktop-page-width: 1088px;
@@ -24,6 +24,9 @@ $blue-light:   #92a2db;
 $blue-dark:    #6e90cf;
 $orange-dark:  #bf7641;
 $orange-light: #cd9266;
+$typeface:     #3B3B3B;
+
+$titlefont:    'Ubuntu', serif;
 
 @import '../../bower_components/neat/app/assets/stylesheets/_neat.scss';
 
@@ -31,8 +34,6 @@ $orange-light: #cd9266;
 
 $mobile: new-breakpoint(max-width 1075px);
 $phone:  new-breakpoint(max-width 525px);
-
-
 
 /*****************************************************************************
   Base Styles
@@ -51,21 +52,57 @@ $phone:  new-breakpoint(max-width 525px);
 		margin: auto;
 	}
 
-
-	.sticky-offset	{
-		margin-bottom: 6rem;
-	}
-
 	.title				{
 		position: absolute;
 		height: 50%;
 		display: block;
 	}
 
+	.join-us {
+		float: right;
+		position: relative;
+		height: 4rem;
+		width: 10%;
+		top: 7rem;
+		right: 3rem;
+		clear: both;
+		font-family: helvetica;
+		font-size: 1rem;
+		text-align: center;	
+		background-color: $blue-light;
+		border: 1rem solid $blue-dark;
+		border-width: 0.1rem;
+		color: white;
+		border-radius: 0.6rem;
+	}
+
+	.letter-n	{
+		position: relative;
+		float: left;
+		position-anchor-vertical: 0%;
+		margin-left: 0rem;
+		width:  15%;
+		margin-top: -16.3rem;
+	}
+
+	.cover-photo	{
+		margin-top: -4rem;
+		width: 100%;
+		max-width: ($desktop-page-width);
+	}
+
+	.bar			{
+		border-top: 0.1rem solid black;
+		border-bottom: 0.1rem solid black;
+		height: 3rem;
+		margin-bottom: 2rem;
+		height: 3.24rem;
+	}
+
 	.menubar		{
 		float: left;
-		width: 20%;
-		margin-bottom: 2rem;
+		width: 15%;
+		margin-bottom: 0rem;
 	}
 
 	.menu-button	{
@@ -74,8 +111,7 @@ $phone:  new-breakpoint(max-width 525px);
 		text-align: center;
 		font-size: 1rem;
 		color: white;
-		height: 100%;
-		height: 3.9rem;
+		height: 3rem;
 	}
 
 	#home-button.menu-button	{
@@ -88,8 +124,8 @@ $phone:  new-breakpoint(max-width 525px);
 
 	#facebook-logo	{
 		font-style: bold;
-		font-size: 2.5rem;
-		margin-top: 0.25rem;
+		font-size: 2.25rem;
+		margin-top: 0rem;
 	}
 
 	#twitter.menu-button	{
@@ -97,15 +133,15 @@ $phone:  new-breakpoint(max-width 525px);
 	}
 
 	#twitter-logo	{
-		max-height: 3rem;
-		max-width: 3rem;
+		max-height: 2rem;
+		max-width: 2rem;
 		margin-top: 0.5rem;
 	}
 
 	.navibar	{
 		float: left;
-		width: 80%;
-		margin-bottom: 2rem;
+		width: 85%;
+		margin-bottom: 0rem;
 	}
 
 	.bar-locked	{
@@ -113,11 +149,13 @@ $phone:  new-breakpoint(max-width 525px);
 		float: left;
 		z-index: 10;
 		top: 0rem;
+		border-top: 0rem;
+		height: 3.1rem;
 		@include outer-container;
 
 	}
 
-	.nav-button	{
+	.navi-button	{
 		float: left;
 		font-family: helvetica;
 		text-align: center;
@@ -127,67 +165,179 @@ $phone:  new-breakpoint(max-width 525px);
 		background-color: $blue-light;
 		color: white;
 		width: 20%;
+		height: 3rem;
+		line-height: 0rem;
 	}
 
 	.news-nav-button	{
 		background-color: $green-light;
 	}
 
+	.news-nav-button > h4	{
+		line-height: 1rem;
+	}
+
 	.opinion-nav-button	{
 		background-color: $red-light;
+	}
+
+	.opinion-nav-button > h4	{
+		line-height: 1rem;
 	}
 
 	.arts-nav-button	{
 		background-color: $yellow-light;
 	}
 
+	.arts-nav-button > h4	{
+		line-height: 1rem;
+	}
+
 	.features-nav-button	{
 		background-color: $purple-light;
+	}
+
+	.features-nav-button > h4	{
+		line-height: 1rem;
 	}
 
 	.columns-nav-button	{
 		background-color: $orange-light;
 	}
 
+	.columns-nav-button > h4	{
+		line-height: 1rem;
+	}
+
+
 															/* IMAGES START */
+
+	.slideshow-container				{
+		position: relative;
+		height: 36rem;
+		display: block;
+		margin-bottom: 2rem;
+		@include span-columns(9);
+	}
+
+	#skippr-slideshow > div	> .slideshow-hed	{
+		padding: 4rem;
+		padding-left: 8rem;
+		padding-bottom: 1rem;
+		width: 75%;
+		height: 22rem;
+		font-family: $titlefont;
+		color: white;
+		font-size: 3.5rem;
+		opacity: 0.75;
+		text-shadow: 0 0 7px black;
+	}
+
+	#skippr-slideshow > div	> .slideshow-dek	{
+		padding: 4rem;
+		padding-left: 8rem;
+		padding-top: 1rem;
+		width: 75%;
+		height: 14rem;
+		font-family: $titlefont;
+		color: white;
+		font-size: 2rem;
+		opacity: 0.75;
+		text-shadow: 0 0 7px black;
+	}
+
+	.card								{
+		float: left; 
+		margin-bottom: 2rem;
+		@include span-columns(6);
+		@include omega(2n);
+		background-color: white;
+		box-shadow: 0 0 20px gray;
+	}
+
+	.card:hover							{
+		box-shadow: 0 0 10px gray;
+	}
 
 	.image-container					{
 		float: left;
-		clear: auto;
 		position: relative;
+		display: block;
 		background-color: none;
 		opacity: 1;
-		margin-bottom: 2rem;
-		@include span-columns(3);
+		border-color: white;
+		@include span-columns(6);
+		@include omega(1n);
+
 		@include media($mobile)				{
 			@include span-columns(6);
+			@include omega(2n);
 		}
 		@include media($phone)				{
 			@include span-columns(12);
 		}
 	}
 
-	.image-container:nth-child(4n+2)	{
-		background-color: none;
-		margin-right: 0px;
-	}
-
-	.image-container:nth-child(2n+2)	{
-		@include media($mobile)	{
-			background-color: none;
-			margin-right: 0px;
-		}
-	}
-
 	.thumbnail		{
 		display: block;
-		border-radius:0px;
 		padding: 0px;
+		max-width: 100%;
+		max-height: 100%;
+		border-color: white;
 	}
 																/* IMAGES END */
 
 
 																/* TAGS START 	*/
+
+	.published			{
+		float: left;
+		position: absolute;
+		bottom: 18rem;
+		left: 2rem;
+		border-radius: 0.6rem;
+		display: block;
+		width: auto;
+		padding-right: 1rem;
+		padding-left: 1rem;
+		padding-bottom: 2.95rem;
+		opacity: 0.75;
+		font-size: 1.5rem;
+		color: $typeface;
+		font-family: $titlefont;
+		display: inline-block;
+		width: auto;
+		display: none;
+	}
+
+	.published-date			{
+		bottom: 15rem;
+	}
+
+	.modified			{
+		float: left;
+		position: absolute;
+		bottom: 10rem;
+		left: 2rem;
+		border-radius: 0.6rem;
+		display: block;
+		width: auto;
+		padding-right: 1rem;
+		padding-left: 1rem;
+		padding-bottom: 2.95rem;
+		opacity: 0.75;
+		font-size: 1.5rem;
+		color: $typeface;
+		font-family: $titlefont;
+		display: inline-block;
+		width: auto;
+		display: none;
+	}
+
+	.modified-date			{
+		bottom: 7rem;
+	}
+
 	.tag				{
 		float: left;
 		position: absolute;
@@ -230,10 +380,60 @@ $phone:  new-breakpoint(max-width 525px);
 		display: inline-block;
 		width: auto;
 	}
+
+	.info-container		{
+		float: right;
+		width: 50%;
+	}
+
+	.hed		{
+		height: 16rem;
+		font-family: $titlefont;
+		font-weight: bold;
+		font-style: italic;
+		font-size: 2.25rem;
+		color: $typeface;
+		overflow: hidden;
+		padding: 1.5rem;
+		padding-left: 0.5rem;
+		
+	}
+
+	.dek 		{
+		height: 4.75rem;
+		font-family: $titlefont;
+		font-style: italic;
+		font-size: 1.5rem;
+		padding: 0.5rem;
+		padding-left: 0.5rem;
+		color: $typeface;
+	}
+
+
+
+
 																/* TAGS END 	*/
 
-	.highlight	{
-		background-color: yellow;
+	.byline 	{
+		height: 1.75rem;
+		font-family: $titlefont;
+		font-style: normal;
+		font-size: 1rem;
+		padding: 2.5rem;
+		padding-left: 0.5rem;
+		color: $typeface;
+	}
+
+	.author	{
+		height: 1.75rem;
+		font-family: $titlefont;
+		font-style: normal;
+		font-size: 1rem;
+		padding: 0.5rem;
+		padding-left: 0.5rem;
+		color: $typeface;
+		text-transform: uppercase;
+		font-weight: bold;
 	}
 
 	.news-tag	{
@@ -298,11 +498,9 @@ $phone:  new-breakpoint(max-width 525px);
 		opacity: 1;
 	}
 
-
 /*****************************************************************************
   Layout Styles
 ******************************************************************************/
-
 
 
 
